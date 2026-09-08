@@ -1,0 +1,2294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.4 on win32)" generated="2026-09-08T09:53:19.759643" rpa="false" schemaversion="5">
+<suite id="s1" name="ROBOT FRAMEWORK AUTOMATION" source="D:\ROBOT FRAMEWORK AUTOMATION">
+<suite id="s1-s1" name="Tests" source="D:\ROBOT FRAMEWORK AUTOMATION\Tests">
+<suite id="s1-s1-s1" name="Transaction" source="D:\ROBOT FRAMEWORK AUTOMATION\Tests\Transaction">
+<suite id="s1-s1-s1-s1" name="Create Billing" source="D:\ROBOT FRAMEWORK AUTOMATION\Tests\Transaction\Create Billing">
+<suite id="s1-s1-s1-s1-s1" name="Create Billing 5Data Teller" source="D:\ROBOT FRAMEWORK AUTOMATION\Tests\Transaction\Create Billing\create_billing_5data_teller.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Create 5 Data Billing ID Teller" line="10">
+<kw name="Setup Awal Test" owner="login_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:23.074943" level="INFO">Opening browser 'Edge' to base url 'http://10.10.10.9/QNB-TAXIS/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-08T09:53:23.074094" elapsed="5.263229"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-09-08T09:53:28.337816" elapsed="0.065901"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_USERNAME}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:28.404744" elapsed="0.232830"/>
+</kw>
+<kw name="Mulai Perekaman Video" owner="login_keywords">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-09-08T09:53:28.641442" level="INFO">${timestamp} = 20260908_095328</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-09-08T09:53:28.639513" elapsed="0.003129"/>
+</kw>
+<kw name="Start Video Recording" owner="ScreenCapLibrary">
+<msg time="2026-09-08T09:53:30.850503" level="INFO">Automatically setting a fps of 5.5</msg>
+<arg>alias=video1</arg>
+<arg>name=D:\\ROBOT FRAMEWORK AUTOMATION\\resources\\keywords/../../results/Screen Record/${TEST NAME}_${timestamp}</arg>
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<status status="PASS" start="2026-09-08T09:53:28.643214" elapsed="2.212365"/>
+</kw>
+<status status="PASS" start="2026-09-08T09:53:28.638267" elapsed="2.217961"/>
+</kw>
+<status status="PASS" start="2026-09-08T09:53:23.072172" elapsed="7.784476"/>
+</kw>
+<kw name="Login Sebagai Teller" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_USERNAME}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:30.858229" elapsed="0.014669"/>
+</kw>
+<kw name="Isi Username Dan Password" owner="login_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:30.875904" level="INFO">Typing text 'qateller' into text field 'css=#Main_tbUserName'.</msg>
+<arg>${INPUT_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:30.875030" elapsed="0.098219"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:30.975878" level="INFO">Typing text 'P@ssw0rd!@#' into text field 'css=#Main_tbPassword'.</msg>
+<arg>${INPUT_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:30.974300" elapsed="0.106122"/>
+</kw>
+<arg>${TELLER_USER}</arg>
+<arg>${TELLER_PASS}</arg>
+<status status="PASS" start="2026-09-08T09:53:30.873918" elapsed="0.206890"/>
+</kw>
+<kw name="Klik Tombol Login" owner="login_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:31.083221" level="INFO">Clicking element 'css=#Main_rbtLoginNew'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:31.082312" elapsed="0.659361"/>
+</kw>
+<status status="PASS" start="2026-09-08T09:53:31.081280" elapsed="0.660879"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:53:34.744720" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:53:31.742463" elapsed="3.002677"/>
+</kw>
+<status status="PASS" start="2026-09-08T09:53:30.857487" elapsed="3.887959"/>
+</kw>
+<kw name="Navigasi Ke Menu Create Billing Teller" owner="create_billing_keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:53:39.748521" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:53:34.747345" elapsed="5.001728"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_DASHBOARD}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:53:39.749521" elapsed="0.011564"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:39.762115" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:53:39.761426" elapsed="0.027955"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MENU_PEMBAYARAN_PAJAK}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:39.789735" elapsed="0.018558"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:39.809760" level="INFO">Clicking element 'id=Main_ucTeller_btnBillingList'.</msg>
+<arg>${MENU_PEMBAYARAN_PAJAK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:39.808799" elapsed="1.590314"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:53:41.399789" elapsed="0.005986"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:53:44.408667" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:53:41.406878" elapsed="3.002303"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_DASHBOARD}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:53:44.409530" elapsed="0.007514"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:44.417985" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:53:44.417349" elapsed="0.027226"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SUBMENU_CREATE_BILLING}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:44.444905" elapsed="0.020269"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:44.466591" level="INFO">Clicking element 'css=#mnuTransactionCreatedBilling'.</msg>
+<arg>${SUBMENU_CREATE_BILLING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:44.465666" elapsed="0.831862"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:53:45.298200" elapsed="0.004890"/>
+</kw>
+<status status="PASS" start="2026-09-08T09:53:34.746261" elapsed="10.557543"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-08T09:53:45.309530" level="INFO">--- MENGISI DATA BILLING KE-1 ---</msg>
+<arg>--- MENGISI DATA BILLING KE-${i} ---</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-08T09:53:45.308510" elapsed="0.001353"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:53:45.310293" elapsed="0.004369"/>
+</kw>
+<kw name="Buat Data Dinamis Billing ID" owner="create_billing_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:53:45.317667" level="INFO">${rand_acc} = 3252216708539</msg>
+<var>${rand_acc}</var>
+<arg>13</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:53:45.316536" elapsed="0.001421"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:53:45.319440" level="INFO">${DYNAMIC_ACCOUNT_NO} = 1233252216708539</msg>
+<arg>${DYNAMIC_ACCOUNT_NO}</arg>
+<arg>123${rand_acc}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:53:45.318353" elapsed="0.002029"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:53:45.323906" level="INFO">${rand_npwp} = 4058564189215751</msg>
+<var>${rand_npwp}</var>
+<arg>16</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:53:45.321422" elapsed="0.002938"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:53:45.326636" level="INFO">${DYNAMIC_TAX_ID} = 4058564189215751</msg>
+<arg>${DYNAMIC_TAX_ID}</arg>
+<arg>${rand_npwp}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:53:45.324809" elapsed="0.004764"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:53:45.331221" level="INFO">${rand_name} = oBwJK</msg>
+<var>${rand_name}</var>
+<arg>5</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:53:45.330149" elapsed="0.001361"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-09-08T09:53:45.332800" level="INFO">${timestamp} = 5345</msg>
+<var>${timestamp}</var>
+<arg>result_format=%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-09-08T09:53:45.331864" elapsed="0.001527"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:53:45.335170" level="INFO">${DYNAMIC_CLIENT_NAME} = Client oBwJK 5345</msg>
+<arg>${DYNAMIC_CLIENT_NAME}</arg>
+<arg>Client ${rand_name} ${timestamp}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:53:45.333892" elapsed="0.001587"/>
+</kw>
+<doc>Generate data unik 16 digit untuk Account &amp; NPWP, serta Client Name dinamis</doc>
+<status status="PASS" start="2026-09-08T09:53:45.315357" elapsed="0.020382"/>
+</kw>
+<kw name="Buka Pop Up Create New Billing ID" owner="create_billing_keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:53:48.340497" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:53:45.339076" elapsed="3.001855"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_DASHBOARD}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:53:48.341343" elapsed="0.008057"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:48.350367" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:53:48.349713" elapsed="0.023414"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_CREATE_NEW_BILLING}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:48.373591" elapsed="0.018294"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:48.393095" level="INFO">Clicking element 'css=#ctl00_Main_rbtCreateNewBillingId'.</msg>
+<arg>${BTN_CREATE_NEW_BILLING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:48.392203" elapsed="0.192179"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:53:48.585109" elapsed="0.005356"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:53:50.592556" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:53:48.591040" elapsed="2.001930"/>
+</kw>
+<status status="PASS" start="2026-09-08T09:53:45.336127" elapsed="5.257161"/>
+</kw>
+<kw name="Isi Form Create New Billing ID Bagian Pertama" owner="create_billing_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_DASHBOARD}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:53:50.594995" elapsed="0.008243"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:50.604606" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:53:50.603701" elapsed="0.027413"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_POPUP}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:53:50.631434" elapsed="0.011143"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:50.643926" level="INFO">Selecting frame 'xpath=//iframe[@name='PopUpWindow']'.</msg>
+<arg>${FRAME_POPUP}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:53:50.643044" elapsed="0.033109"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${RDO_NASABAH}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:50.676648" elapsed="0.019541"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${RDO_NASABAH}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-09-08T09:53:50.696537" elapsed="0.021245"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:50.719003" level="INFO">Clicking element 'id=Main_rblNasabahType_0'.</msg>
+<arg>${RDO_NASABAH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:50.718111" elapsed="0.200909"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:50.920634" level="INFO">Typing text '1233252216708539' into text field 'id=Main_tbCustomerAcctNo'.</msg>
+<arg>${INPUT_ACCOUNT_NO}</arg>
+<arg>${account_no}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:50.919482" elapsed="0.196676"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:51.117824" level="INFO">Typing text '4058564189215751' into text field 'id=ctl00_Main_tbTaxPayerIdNo_Input'.</msg>
+<arg>${INPUT_TAX_PAYER_ID}</arg>
+<arg>${tax_payer_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:51.116666" elapsed="0.215312"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:51.334226" level="INFO">Selecting options from selection list 'id=Main_ddlChannelType' by value 7012.</msg>
+<arg>${DDL_CHANNEL_TYPE}</arg>
+<arg>${channel_value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-09-08T09:53:51.332734" elapsed="0.203408"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:51.537056" elapsed="0.035299"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-09-08T09:53:51.573084" elapsed="0.037781"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:51.611331" elapsed="0.053105"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:51.666623" level="INFO">Clicking element 'id=Main_tbCustomerName'.</msg>
+<arg>${INPUT_CLIENT_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:51.665212" elapsed="0.372034"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:52.039121" level="INFO">Typing text 'Client oBwJK 5345' into text field 'id=Main_tbCustomerName'.</msg>
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>${client_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:52.037860" elapsed="0.232654"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:52.272520" level="INFO">Typing text 'Pembayaran Pajak Rutin Data Ke-1' into text field 'id=Main_tbDescription'.</msg>
+<arg>${INPUT_DESCRIPTION}</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:52.271159" elapsed="0.242987"/>
+</kw>
+<arg>${DYNAMIC_ACCOUNT_NO}</arg>
+<arg>${DYNAMIC_TAX_ID}</arg>
+<arg>7012</arg>
+<arg>${DYNAMIC_CLIENT_NAME}</arg>
+<arg>Pembayaran Pajak Rutin Data Ke-${i}</arg>
+<status status="PASS" start="2026-09-08T09:53:50.593847" elapsed="1.920837"/>
+</kw>
+<kw name="Isi Detail Tax Payment Dan Submit" owner="create_billing_keywords">
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:53:52.517278" elapsed="0.007626"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:52.526648" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:53:52.525484" elapsed="0.049730"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:52.576985" level="INFO">Selecting frame 'xpath=//iframe[@name='PopUpWindow']'.</msg>
+<arg>${FRAME_POPUP}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:53:52.575827" elapsed="0.059624"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_TAX_ACCOUNT_MAP}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:52.636039" elapsed="0.031073"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:52.668914" level="INFO">Clicking element 'id=ctl00_Main_rcbTaxAccountCode_Input'.</msg>
+<arg>${INPUT_TAX_ACCOUNT_MAP}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:52.667734" elapsed="0.392622"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:53:54.063363" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:53:53.061102" elapsed="1.002956"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//li[normalize-space()="${map_code}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:54.064455" elapsed="0.028833"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:54.094901" level="INFO">Clicking element 'xpath=//li[normalize-space()="411119 - PPh Migas Lainnya"]'.</msg>
+<arg>xpath=//li[normalize-space()="${map_code}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:54.093805" elapsed="0.266512"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:53:56.363132" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:53:54.360909" elapsed="2.002568"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_PAYMENT_CODE}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:56.363877" elapsed="0.018448"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:56.383396" level="INFO">Clicking element 'id=ctl00_Main_rcbPaymentCode_Input'.</msg>
+<arg>${INPUT_PAYMENT_CODE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:56.382646" elapsed="0.232520"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:53:57.616734" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:53:56.615577" elapsed="1.001575"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="${payment_code}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:57.617607" elapsed="0.022489"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:57.641179" level="INFO">Clicking element 'xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="100 - Masa"]'.</msg>
+<arg>xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="${payment_code}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:57.640421" elapsed="0.211944"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_TAX_YEAR}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:57.853013" elapsed="0.037605"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:57.892967" level="INFO">Clicking element 'id=ctl00_Main_rntYear'.</msg>
+<arg>${INPUT_TAX_YEAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:57.891417" elapsed="0.340870"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:58.234307" level="INFO">Typing text '2026' into text field 'id=ctl00_Main_rntYear'.</msg>
+<arg>${INPUT_TAX_YEAR}</arg>
+<arg>${tax_year}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:58.233087" elapsed="0.155014"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_AMOUNT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:58.388629" elapsed="0.036204"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:58.426403" level="INFO">Clicking element 'id=ctl00_Main_rntAmount'.</msg>
+<arg>${INPUT_AMOUNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:58.425234" elapsed="0.244300"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:58.671533" level="INFO">Typing text '1500000' into text field 'id=ctl00_Main_rntAmount'.</msg>
+<arg>${INPUT_AMOUNT}</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:58.670199" elapsed="0.137447"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_ADD_PAYMENT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:53:58.808063" elapsed="0.038530"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:53:58.848573" level="INFO">Clicking element 'id=ctl00_Main_rbtAddTax'.</msg>
+<arg>${BTN_ADD_PAYMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:53:58.847123" elapsed="0.233425"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:01.082732" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:53:59.081124" elapsed="2.001943"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_SUBMIT_BILLING}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:01.083383" elapsed="0.015738"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:01.100080" level="INFO">Clicking element 'id=ctl00_Main_rbtSubmit'.</msg>
+<arg>${BTN_SUBMIT_BILLING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:01.099425" elapsed="0.209058"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:01.311650" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-09-08T09:54:01.310556" elapsed="0.014266"/>
+</kw>
+<arg>Handle Alert</arg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-09-08T09:54:01.309013" elapsed="0.016195"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:01.327977" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-09-08T09:54:01.327054" elapsed="0.783953"/>
+</kw>
+<arg>Handle Alert</arg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-09-08T09:54:01.325663" elapsed="0.785786"/>
+</kw>
+<arg>411119 - PPh Migas Lainnya</arg>
+<arg>100 - Masa</arg>
+<arg>2026</arg>
+<arg>1500000</arg>
+<status status="PASS" start="2026-09-08T09:53:52.515607" elapsed="9.596188"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:05.114040" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:02.112287" elapsed="3.002162"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2026-09-08T09:53:45.307702" elapsed="19.807004"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-08T09:54:05.116407" level="INFO">--- MENGISI DATA BILLING KE-2 ---</msg>
+<arg>--- MENGISI DATA BILLING KE-${i} ---</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-08T09:54:05.115673" elapsed="0.000997"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:05.117013" elapsed="0.003406"/>
+</kw>
+<kw name="Buat Data Dinamis Billing ID" owner="create_billing_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:54:05.122085" level="INFO">${rand_acc} = 5745502390134</msg>
+<var>${rand_acc}</var>
+<arg>13</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:54:05.121572" elapsed="0.000700"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:54:05.123461" level="INFO">${DYNAMIC_ACCOUNT_NO} = 1235745502390134</msg>
+<arg>${DYNAMIC_ACCOUNT_NO}</arg>
+<arg>123${rand_acc}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:54:05.122541" elapsed="0.001182"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:54:05.124883" level="INFO">${rand_npwp} = 0968296514456198</msg>
+<var>${rand_npwp}</var>
+<arg>16</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:54:05.124113" elapsed="0.001053"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:54:05.126736" level="INFO">${DYNAMIC_TAX_ID} = 0968296514456198</msg>
+<arg>${DYNAMIC_TAX_ID}</arg>
+<arg>${rand_npwp}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:54:05.125501" elapsed="0.001508"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:54:05.128115" level="INFO">${rand_name} = InkPh</msg>
+<var>${rand_name}</var>
+<arg>5</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:54:05.127364" elapsed="0.000974"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-09-08T09:54:05.129638" level="INFO">${timestamp} = 5405</msg>
+<var>${timestamp}</var>
+<arg>result_format=%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-09-08T09:54:05.128746" elapsed="0.001122"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:54:05.131184" level="INFO">${DYNAMIC_CLIENT_NAME} = Client InkPh 5405</msg>
+<arg>${DYNAMIC_CLIENT_NAME}</arg>
+<arg>Client ${rand_name} ${timestamp}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:54:05.130220" elapsed="0.001423"/>
+</kw>
+<doc>Generate data unik 16 digit untuk Account &amp; NPWP, serta Client Name dinamis</doc>
+<status status="PASS" start="2026-09-08T09:54:05.120833" elapsed="0.011131"/>
+</kw>
+<kw name="Buka Pop Up Create New Billing ID" owner="create_billing_keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:08.134218" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:05.133243" elapsed="3.001374"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_DASHBOARD}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:54:08.135026" elapsed="0.008456"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:08.144794" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:08.143835" elapsed="0.026697"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_CREATE_NEW_BILLING}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:08.170996" elapsed="0.017544"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:08.189552" level="INFO">Clicking element 'css=#ctl00_Main_rbtCreateNewBillingId'.</msg>
+<arg>${BTN_CREATE_NEW_BILLING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:08.188864" elapsed="0.167070"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:08.356308" elapsed="0.004045"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:10.362480" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:08.360913" elapsed="2.002180"/>
+</kw>
+<status status="PASS" start="2026-09-08T09:54:05.132326" elapsed="5.231081"/>
+</kw>
+<kw name="Isi Form Create New Billing ID Bagian Pertama" owner="create_billing_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_DASHBOARD}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:54:10.365514" elapsed="0.040813"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:10.407571" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:10.406814" elapsed="0.032091"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_POPUP}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:54:10.439390" elapsed="0.010537"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:10.452079" level="INFO">Selecting frame 'xpath=//iframe[@name='PopUpWindow']'.</msg>
+<arg>${FRAME_POPUP}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:10.450444" elapsed="0.031814"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${RDO_NASABAH}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:10.482729" elapsed="0.018670"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${RDO_NASABAH}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-09-08T09:54:10.501881" elapsed="0.023716"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:10.527130" level="INFO">Clicking element 'id=Main_rblNasabahType_0'.</msg>
+<arg>${RDO_NASABAH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:10.526123" elapsed="0.192003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:10.719719" level="INFO">Typing text '1235745502390134' into text field 'id=Main_tbCustomerAcctNo'.</msg>
+<arg>${INPUT_ACCOUNT_NO}</arg>
+<arg>${account_no}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:10.718651" elapsed="0.211943"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:10.932387" level="INFO">Typing text '0968296514456198' into text field 'id=ctl00_Main_tbTaxPayerIdNo_Input'.</msg>
+<arg>${INPUT_TAX_PAYER_ID}</arg>
+<arg>${tax_payer_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:10.931175" elapsed="0.215789"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:11.149478" level="INFO">Selecting options from selection list 'id=Main_ddlChannelType' by value 7012.</msg>
+<arg>${DDL_CHANNEL_TYPE}</arg>
+<arg>${channel_value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-09-08T09:54:11.147709" elapsed="0.166003"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:11.314251" elapsed="0.041192"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-09-08T09:54:11.355858" elapsed="0.035154"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:11.391583" elapsed="0.038066"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:11.431172" level="INFO">Clicking element 'id=Main_tbCustomerName'.</msg>
+<arg>${INPUT_CLIENT_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:11.430091" elapsed="0.288126"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:11.720181" level="INFO">Typing text 'Client InkPh 5405' into text field 'id=Main_tbCustomerName'.</msg>
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>${client_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:11.718882" elapsed="0.286456"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:12.007334" level="INFO">Typing text 'Pembayaran Pajak Rutin Data Ke-2' into text field 'id=Main_tbDescription'.</msg>
+<arg>${INPUT_DESCRIPTION}</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:12.006038" elapsed="0.207591"/>
+</kw>
+<arg>${DYNAMIC_ACCOUNT_NO}</arg>
+<arg>${DYNAMIC_TAX_ID}</arg>
+<arg>7012</arg>
+<arg>${DYNAMIC_CLIENT_NAME}</arg>
+<arg>Pembayaran Pajak Rutin Data Ke-${i}</arg>
+<status status="PASS" start="2026-09-08T09:54:10.363962" elapsed="1.849987"/>
+</kw>
+<kw name="Isi Detail Tax Payment Dan Submit" owner="create_billing_keywords">
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:12.215647" elapsed="0.005058"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:12.222541" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:12.221216" elapsed="0.041283"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:12.264269" level="INFO">Selecting frame 'xpath=//iframe[@name='PopUpWindow']'.</msg>
+<arg>${FRAME_POPUP}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:12.263103" elapsed="0.049139"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_TAX_ACCOUNT_MAP}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:12.312645" elapsed="0.021573"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:12.335924" level="INFO">Clicking element 'id=ctl00_Main_rcbTaxAccountCode_Input'.</msg>
+<arg>${INPUT_TAX_ACCOUNT_MAP}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:12.334783" elapsed="0.250673"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:13.591298" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:12.586035" elapsed="1.005910"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//li[normalize-space()="${map_code}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:13.592372" elapsed="0.022494"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:13.616027" level="INFO">Clicking element 'xpath=//li[normalize-space()="411119 - PPh Migas Lainnya"]'.</msg>
+<arg>xpath=//li[normalize-space()="${map_code}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:13.615180" elapsed="0.187799"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:15.804472" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:13.803390" elapsed="2.001440"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_PAYMENT_CODE}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:15.805147" elapsed="0.017104"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:15.823197" level="INFO">Clicking element 'id=ctl00_Main_rcbPaymentCode_Input'.</msg>
+<arg>${INPUT_PAYMENT_CODE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:15.822597" elapsed="0.191851"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:17.016530" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:16.014905" elapsed="1.002298"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="${payment_code}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:17.017654" elapsed="0.018153"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:17.037207" level="INFO">Clicking element 'xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="100 - Masa"]'.</msg>
+<arg>xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="${payment_code}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:17.036272" elapsed="0.211824"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_TAX_YEAR}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:17.248473" elapsed="0.025206"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:17.274899" level="INFO">Clicking element 'id=ctl00_Main_rntYear'.</msg>
+<arg>${INPUT_TAX_YEAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:17.274151" elapsed="0.230566"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:17.506684" level="INFO">Typing text '2026' into text field 'id=ctl00_Main_rntYear'.</msg>
+<arg>${INPUT_TAX_YEAR}</arg>
+<arg>${tax_year}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:17.505278" elapsed="0.129619"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_AMOUNT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:17.635497" elapsed="0.062026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:17.698969" level="INFO">Clicking element 'id=ctl00_Main_rntAmount'.</msg>
+<arg>${INPUT_AMOUNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:17.698101" elapsed="0.237106"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:17.937030" level="INFO">Typing text '1500000' into text field 'id=ctl00_Main_rntAmount'.</msg>
+<arg>${INPUT_AMOUNT}</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:17.935844" elapsed="0.141600"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_ADD_PAYMENT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:18.077896" elapsed="0.022582"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:18.102050" level="INFO">Clicking element 'id=ctl00_Main_rbtAddTax'.</msg>
+<arg>${BTN_ADD_PAYMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:18.101021" elapsed="0.258111"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:20.361865" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:18.359852" elapsed="2.002513"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_SUBMIT_BILLING}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:20.362852" elapsed="0.018493"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:20.382695" level="INFO">Clicking element 'id=ctl00_Main_rbtSubmit'.</msg>
+<arg>${BTN_SUBMIT_BILLING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:20.381801" elapsed="0.192445"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:20.576550" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-09-08T09:54:20.575732" elapsed="0.010890"/>
+</kw>
+<arg>Handle Alert</arg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-09-08T09:54:20.574601" elapsed="0.012267"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:20.588947" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-09-08T09:54:20.588208" elapsed="0.528406"/>
+</kw>
+<arg>Handle Alert</arg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-09-08T09:54:20.587215" elapsed="0.529742"/>
+</kw>
+<arg>411119 - PPh Migas Lainnya</arg>
+<arg>100 - Masa</arg>
+<arg>2026</arg>
+<arg>1500000</arg>
+<status status="PASS" start="2026-09-08T09:54:12.214567" elapsed="8.902741"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:24.119422" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:21.117953" elapsed="3.001981"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2026-09-08T09:54:05.115079" elapsed="19.005174"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-08T09:54:24.122744" level="INFO">--- MENGISI DATA BILLING KE-3 ---</msg>
+<arg>--- MENGISI DATA BILLING KE-${i} ---</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-08T09:54:24.121485" elapsed="0.001918"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:24.123975" elapsed="0.004460"/>
+</kw>
+<kw name="Buat Data Dinamis Billing ID" owner="create_billing_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:54:24.131132" level="INFO">${rand_acc} = 9910472129979</msg>
+<var>${rand_acc}</var>
+<arg>13</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:54:24.130271" elapsed="0.001227"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:54:24.133236" level="INFO">${DYNAMIC_ACCOUNT_NO} = 1239910472129979</msg>
+<arg>${DYNAMIC_ACCOUNT_NO}</arg>
+<arg>123${rand_acc}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:54:24.131959" elapsed="0.001662"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:54:24.135108" level="INFO">${rand_npwp} = 4324825056698786</msg>
+<var>${rand_npwp}</var>
+<arg>16</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:54:24.134164" elapsed="0.001218"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:54:24.137477" level="INFO">${DYNAMIC_TAX_ID} = 4324825056698786</msg>
+<arg>${DYNAMIC_TAX_ID}</arg>
+<arg>${rand_npwp}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:54:24.136031" elapsed="0.001914"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:54:24.139441" level="INFO">${rand_name} = UhyZv</msg>
+<var>${rand_name}</var>
+<arg>5</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:54:24.138421" elapsed="0.001510"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-09-08T09:54:24.141700" level="INFO">${timestamp} = 5424</msg>
+<var>${timestamp}</var>
+<arg>result_format=%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-09-08T09:54:24.140439" elapsed="0.001810"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:54:24.144101" level="INFO">${DYNAMIC_CLIENT_NAME} = Client UhyZv 5424</msg>
+<arg>${DYNAMIC_CLIENT_NAME}</arg>
+<arg>Client ${rand_name} ${timestamp}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:54:24.142797" elapsed="0.001686"/>
+</kw>
+<doc>Generate data unik 16 digit untuk Account &amp; NPWP, serta Client Name dinamis</doc>
+<status status="PASS" start="2026-09-08T09:54:24.129084" elapsed="0.015783"/>
+</kw>
+<kw name="Buka Pop Up Create New Billing ID" owner="create_billing_keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:27.148483" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:24.146645" elapsed="3.002666"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_DASHBOARD}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:54:27.149894" elapsed="0.011231"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:27.162813" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:27.161738" elapsed="0.036046"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_CREATE_NEW_BILLING}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:27.198346" elapsed="0.020492"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:27.220820" level="INFO">Clicking element 'css=#ctl00_Main_rbtCreateNewBillingId'.</msg>
+<arg>${BTN_CREATE_NEW_BILLING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:27.219290" elapsed="0.190073"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:27.410049" elapsed="0.005610"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:29.418057" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:27.416324" elapsed="2.002169"/>
+</kw>
+<status status="PASS" start="2026-09-08T09:54:24.145411" elapsed="5.273422"/>
+</kw>
+<kw name="Isi Form Create New Billing ID Bagian Pertama" owner="create_billing_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_DASHBOARD}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:54:29.420932" elapsed="0.010201"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:29.432151" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:29.431466" elapsed="0.027753"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_POPUP}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:54:29.459623" elapsed="0.009131"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:29.470195" level="INFO">Selecting frame 'xpath=//iframe[@name='PopUpWindow']'.</msg>
+<arg>${FRAME_POPUP}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:29.469248" elapsed="0.039797"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${RDO_NASABAH}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:29.509394" elapsed="0.018924"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${RDO_NASABAH}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-09-08T09:54:29.528700" elapsed="0.029217"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:29.559407" level="INFO">Clicking element 'id=Main_rblNasabahType_0'.</msg>
+<arg>${RDO_NASABAH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:29.558429" elapsed="0.214010"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:29.774209" level="INFO">Typing text '1239910472129979' into text field 'id=Main_tbCustomerAcctNo'.</msg>
+<arg>${INPUT_ACCOUNT_NO}</arg>
+<arg>${account_no}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:29.773003" elapsed="0.221422"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:29.996356" level="INFO">Typing text '4324825056698786' into text field 'id=ctl00_Main_tbTaxPayerIdNo_Input'.</msg>
+<arg>${INPUT_TAX_PAYER_ID}</arg>
+<arg>${tax_payer_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:29.995084" elapsed="0.276645"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:30.273709" level="INFO">Selecting options from selection list 'id=Main_ddlChannelType' by value 7012.</msg>
+<arg>${DDL_CHANNEL_TYPE}</arg>
+<arg>${channel_value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-09-08T09:54:30.272374" elapsed="0.250402"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:30.523425" elapsed="0.024987"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-09-08T09:54:30.549097" elapsed="0.044532"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:30.594135" elapsed="0.054276"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:30.650836" level="INFO">Clicking element 'id=Main_tbCustomerName'.</msg>
+<arg>${INPUT_CLIENT_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:30.649117" elapsed="0.284460"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:30.935230" level="INFO">Typing text 'Client UhyZv 5424' into text field 'id=Main_tbCustomerName'.</msg>
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>${client_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:30.934032" elapsed="0.256662"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:31.192065" level="INFO">Typing text 'Pembayaran Pajak Rutin Data Ke-3' into text field 'id=Main_tbDescription'.</msg>
+<arg>${INPUT_DESCRIPTION}</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:31.191154" elapsed="0.201735"/>
+</kw>
+<arg>${DYNAMIC_ACCOUNT_NO}</arg>
+<arg>${DYNAMIC_TAX_ID}</arg>
+<arg>7012</arg>
+<arg>${DYNAMIC_CLIENT_NAME}</arg>
+<arg>Pembayaran Pajak Rutin Data Ke-${i}</arg>
+<status status="PASS" start="2026-09-08T09:54:29.419421" elapsed="1.973791"/>
+</kw>
+<kw name="Isi Detail Tax Payment Dan Submit" owner="create_billing_keywords">
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:31.395492" elapsed="0.005777"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:31.402955" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:31.401818" elapsed="0.041046"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:31.444380" level="INFO">Selecting frame 'xpath=//iframe[@name='PopUpWindow']'.</msg>
+<arg>${FRAME_POPUP}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:31.443280" elapsed="0.038972"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_TAX_ACCOUNT_MAP}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:31.482846" elapsed="0.023497"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:31.507952" level="INFO">Clicking element 'id=ctl00_Main_rcbTaxAccountCode_Input'.</msg>
+<arg>${INPUT_TAX_ACCOUNT_MAP}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:31.506895" elapsed="0.233225"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:32.742561" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:31.740702" elapsed="1.002570"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//li[normalize-space()="${map_code}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:32.743676" elapsed="0.019935"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:32.765411" level="INFO">Clicking element 'xpath=//li[normalize-space()="411119 - PPh Migas Lainnya"]'.</msg>
+<arg>xpath=//li[normalize-space()="${map_code}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:32.764167" elapsed="0.197179"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:34.963623" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:32.961752" elapsed="2.002339"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_PAYMENT_CODE}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:34.964526" elapsed="0.016472"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:34.981954" level="INFO">Clicking element 'id=ctl00_Main_rcbPaymentCode_Input'.</msg>
+<arg>${INPUT_PAYMENT_CODE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:34.981306" elapsed="0.244690"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:36.227782" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:35.226458" elapsed="1.001739"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="${payment_code}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:36.228626" elapsed="0.017209"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:36.247076" level="INFO">Clicking element 'xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="100 - Masa"]'.</msg>
+<arg>xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="${payment_code}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:36.246167" elapsed="0.198116"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_TAX_YEAR}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:36.445037" elapsed="0.023641"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:36.469786" level="INFO">Clicking element 'id=ctl00_Main_rntYear'.</msg>
+<arg>${INPUT_TAX_YEAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:36.469042" elapsed="0.234278"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:36.706156" level="INFO">Typing text '2026' into text field 'id=ctl00_Main_rntYear'.</msg>
+<arg>${INPUT_TAX_YEAR}</arg>
+<arg>${tax_year}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:36.703732" elapsed="0.120384"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_AMOUNT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:36.824487" elapsed="0.019012"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:36.844688" level="INFO">Clicking element 'id=ctl00_Main_rntAmount'.</msg>
+<arg>${INPUT_AMOUNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:36.843904" elapsed="0.276185"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:37.121859" level="INFO">Typing text '1500000' into text field 'id=ctl00_Main_rntAmount'.</msg>
+<arg>${INPUT_AMOUNT}</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:37.120550" elapsed="0.143811"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_ADD_PAYMENT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:37.264979" elapsed="0.017858"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:37.284025" level="INFO">Clicking element 'id=ctl00_Main_rbtAddTax'.</msg>
+<arg>${BTN_ADD_PAYMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:37.283213" elapsed="0.253835"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:39.539504" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:37.537675" elapsed="2.002150"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_SUBMIT_BILLING}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:39.540141" elapsed="0.017423"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:39.558971" level="INFO">Clicking element 'id=ctl00_Main_rbtSubmit'.</msg>
+<arg>${BTN_SUBMIT_BILLING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:39.558015" elapsed="0.211432"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:39.772528" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-09-08T09:54:39.771429" elapsed="0.012608"/>
+</kw>
+<arg>Handle Alert</arg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-09-08T09:54:39.770000" elapsed="0.014294"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:39.787211" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-09-08T09:54:39.786219" elapsed="0.544609"/>
+</kw>
+<arg>Handle Alert</arg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-09-08T09:54:39.784668" elapsed="0.546597"/>
+</kw>
+<arg>411119 - PPh Migas Lainnya</arg>
+<arg>100 - Masa</arg>
+<arg>2026</arg>
+<arg>1500000</arg>
+<status status="PASS" start="2026-09-08T09:54:31.394072" elapsed="8.937587"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:43.335143" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:40.332865" elapsed="3.002724"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2026-09-08T09:54:24.120699" elapsed="19.215150"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-08T09:54:43.337560" level="INFO">--- MENGISI DATA BILLING KE-4 ---</msg>
+<arg>--- MENGISI DATA BILLING KE-${i} ---</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-08T09:54:43.336817" elapsed="0.001198"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:43.338335" elapsed="0.003291"/>
+</kw>
+<kw name="Buat Data Dinamis Billing ID" owner="create_billing_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:54:43.343332" level="INFO">${rand_acc} = 9190402844806</msg>
+<var>${rand_acc}</var>
+<arg>13</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:54:43.342793" elapsed="0.000725"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:54:43.345154" level="INFO">${DYNAMIC_ACCOUNT_NO} = 1239190402844806</msg>
+<arg>${DYNAMIC_ACCOUNT_NO}</arg>
+<arg>123${rand_acc}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:54:43.343806" elapsed="0.001705"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:54:43.346689" level="INFO">${rand_npwp} = 5469653528047106</msg>
+<var>${rand_npwp}</var>
+<arg>16</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:54:43.345896" elapsed="0.001053"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:54:43.348459" level="INFO">${DYNAMIC_TAX_ID} = 5469653528047106</msg>
+<arg>${DYNAMIC_TAX_ID}</arg>
+<arg>${rand_npwp}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:54:43.347333" elapsed="0.001444"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:54:43.350039" level="INFO">${rand_name} = xuEYh</msg>
+<var>${rand_name}</var>
+<arg>5</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:54:43.349245" elapsed="0.001099"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-09-08T09:54:43.351646" level="INFO">${timestamp} = 5443</msg>
+<var>${timestamp}</var>
+<arg>result_format=%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-09-08T09:54:43.350717" elapsed="0.001139"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:54:43.353575" level="INFO">${DYNAMIC_CLIENT_NAME} = Client xuEYh 5443</msg>
+<arg>${DYNAMIC_CLIENT_NAME}</arg>
+<arg>Client ${rand_name} ${timestamp}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:54:43.352352" elapsed="0.001550"/>
+</kw>
+<doc>Generate data unik 16 digit untuk Account &amp; NPWP, serta Client Name dinamis</doc>
+<status status="PASS" start="2026-09-08T09:54:43.341999" elapsed="0.012266"/>
+</kw>
+<kw name="Buka Pop Up Create New Billing ID" owner="create_billing_keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:46.356850" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:43.355569" elapsed="3.001951"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_DASHBOARD}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:54:46.357985" elapsed="0.010326"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:46.369686" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:46.368769" elapsed="0.028306"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_CREATE_NEW_BILLING}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:46.397557" elapsed="0.017604"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:46.416480" level="INFO">Clicking element 'css=#ctl00_Main_rbtCreateNewBillingId'.</msg>
+<arg>${BTN_CREATE_NEW_BILLING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:46.415498" elapsed="0.184559"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:46.600812" elapsed="0.006237"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:48.609391" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:46.607610" elapsed="2.002374"/>
+</kw>
+<status status="PASS" start="2026-09-08T09:54:43.354611" elapsed="5.255875"/>
+</kw>
+<kw name="Isi Form Create New Billing ID Bagian Pertama" owner="create_billing_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_DASHBOARD}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:54:48.613278" elapsed="0.011840"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:48.626568" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:48.625580" elapsed="0.029391"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_POPUP}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:54:48.655311" elapsed="0.009045"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:48.665436" level="INFO">Selecting frame 'xpath=//iframe[@name='PopUpWindow']'.</msg>
+<arg>${FRAME_POPUP}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:48.664696" elapsed="0.042075"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${RDO_NASABAH}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:48.707129" elapsed="0.019441"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${RDO_NASABAH}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-09-08T09:54:48.726927" elapsed="0.026772"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:48.755501" level="INFO">Clicking element 'id=Main_rblNasabahType_0'.</msg>
+<arg>${RDO_NASABAH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:48.754368" elapsed="0.199532"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:48.955126" level="INFO">Typing text '1239190402844806' into text field 'id=Main_tbCustomerAcctNo'.</msg>
+<arg>${INPUT_ACCOUNT_NO}</arg>
+<arg>${account_no}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:48.954267" elapsed="0.194954"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:49.150503" level="INFO">Typing text '5469653528047106' into text field 'id=ctl00_Main_tbTaxPayerIdNo_Input'.</msg>
+<arg>${INPUT_TAX_PAYER_ID}</arg>
+<arg>${tax_payer_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:49.149606" elapsed="0.258624"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:49.410350" level="INFO">Selecting options from selection list 'id=Main_ddlChannelType' by value 7012.</msg>
+<arg>${DDL_CHANNEL_TYPE}</arg>
+<arg>${channel_value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-09-08T09:54:49.408865" elapsed="0.169810"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:49.579466" elapsed="0.035566"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-09-08T09:54:49.615647" elapsed="0.033123"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:49.649182" elapsed="0.043827"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:49.694251" level="INFO">Clicking element 'id=Main_tbCustomerName'.</msg>
+<arg>${INPUT_CLIENT_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:49.693424" elapsed="0.264568"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:49.959586" level="INFO">Typing text 'Client xuEYh 5443' into text field 'id=Main_tbCustomerName'.</msg>
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>${client_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:49.958459" elapsed="0.255528"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:50.215615" level="INFO">Typing text 'Pembayaran Pajak Rutin Data Ke-4' into text field 'id=Main_tbDescription'.</msg>
+<arg>${INPUT_DESCRIPTION}</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:50.214463" elapsed="0.180241"/>
+</kw>
+<arg>${DYNAMIC_ACCOUNT_NO}</arg>
+<arg>${DYNAMIC_TAX_ID}</arg>
+<arg>7012</arg>
+<arg>${DYNAMIC_CLIENT_NAME}</arg>
+<arg>Pembayaran Pajak Rutin Data Ke-${i}</arg>
+<status status="PASS" start="2026-09-08T09:54:48.611296" elapsed="1.784023"/>
+</kw>
+<kw name="Isi Detail Tax Payment Dan Submit" owner="create_billing_keywords">
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:50.398235" elapsed="0.003724"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:50.403209" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:50.402342" elapsed="0.040857"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:50.444411" level="INFO">Selecting frame 'xpath=//iframe[@name='PopUpWindow']'.</msg>
+<arg>${FRAME_POPUP}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:54:50.443569" elapsed="0.038178"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_TAX_ACCOUNT_MAP}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:50.482384" elapsed="0.026451"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:50.510019" level="INFO">Clicking element 'id=ctl00_Main_rcbTaxAccountCode_Input'.</msg>
+<arg>${INPUT_TAX_ACCOUNT_MAP}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:50.509231" elapsed="0.230850"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:51.741943" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:50.740558" elapsed="1.001747"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//li[normalize-space()="${map_code}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:51.742646" elapsed="0.022025"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:51.766319" level="INFO">Clicking element 'xpath=//li[normalize-space()="411119 - PPh Migas Lainnya"]'.</msg>
+<arg>xpath=//li[normalize-space()="${map_code}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:51.765213" elapsed="0.190931"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:53.957964" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:51.956668" elapsed="2.001721"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_PAYMENT_CODE}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:53.958770" elapsed="0.017330"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:53.977480" level="INFO">Clicking element 'id=ctl00_Main_rcbPaymentCode_Input'.</msg>
+<arg>${INPUT_PAYMENT_CODE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:53.976565" elapsed="0.201716"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:55.180838" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:54.178706" elapsed="1.002635"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="${payment_code}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:55.181750" elapsed="0.016389"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:55.199167" level="INFO">Clicking element 'xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="100 - Masa"]'.</msg>
+<arg>xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="${payment_code}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:55.198459" elapsed="0.189666"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_TAX_YEAR}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:55.388678" elapsed="0.027424"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:55.417622" level="INFO">Clicking element 'id=ctl00_Main_rntYear'.</msg>
+<arg>${INPUT_TAX_YEAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:55.416656" elapsed="0.273105"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:55.691688" level="INFO">Typing text '2026' into text field 'id=ctl00_Main_rntYear'.</msg>
+<arg>${INPUT_TAX_YEAR}</arg>
+<arg>${tax_year}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:55.690353" elapsed="0.134467"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_AMOUNT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:55.825241" elapsed="0.053627"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:55.880713" level="INFO">Clicking element 'id=ctl00_Main_rntAmount'.</msg>
+<arg>${INPUT_AMOUNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:55.879537" elapsed="0.227999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:56.108900" level="INFO">Typing text '1500000' into text field 'id=ctl00_Main_rntAmount'.</msg>
+<arg>${INPUT_AMOUNT}</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:56.108030" elapsed="0.139663"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_ADD_PAYMENT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:56.248269" elapsed="0.019173"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:56.269211" level="INFO">Clicking element 'id=ctl00_Main_rbtAddTax'.</msg>
+<arg>${BTN_ADD_PAYMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:56.268126" elapsed="0.250380"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:54:58.521008" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:56.519081" elapsed="2.002317"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_SUBMIT_BILLING}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:54:58.521774" elapsed="0.019029"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:58.542191" level="INFO">Clicking element 'id=ctl00_Main_rbtSubmit'.</msg>
+<arg>${BTN_SUBMIT_BILLING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:54:58.541168" elapsed="0.227912"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:58.772024" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-09-08T09:54:58.770846" elapsed="0.014700"/>
+</kw>
+<arg>Handle Alert</arg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-09-08T09:54:58.769464" elapsed="0.016567"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:54:58.789772" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-09-08T09:54:58.788246" elapsed="0.630209"/>
+</kw>
+<arg>Handle Alert</arg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-09-08T09:54:58.786661" elapsed="0.632175"/>
+</kw>
+<arg>411119 - PPh Migas Lainnya</arg>
+<arg>100 - Masa</arg>
+<arg>2026</arg>
+<arg>1500000</arg>
+<status status="PASS" start="2026-09-08T09:54:50.396493" elapsed="9.022600"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:55:02.420567" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:54:59.419423" elapsed="3.001509"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2026-09-08T09:54:43.336210" elapsed="19.084914"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-08T09:55:02.422943" level="INFO">--- MENGISI DATA BILLING KE-5 ---</msg>
+<arg>--- MENGISI DATA BILLING KE-${i} ---</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-08T09:55:02.421938" elapsed="0.001369"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:55:02.423654" elapsed="0.003431"/>
+</kw>
+<kw name="Buat Data Dinamis Billing ID" owner="create_billing_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:55:02.429207" level="INFO">${rand_acc} = 7595012162437</msg>
+<var>${rand_acc}</var>
+<arg>13</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:55:02.428672" elapsed="0.000756"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:55:02.430612" level="INFO">${DYNAMIC_ACCOUNT_NO} = 1237595012162437</msg>
+<arg>${DYNAMIC_ACCOUNT_NO}</arg>
+<arg>123${rand_acc}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:55:02.429698" elapsed="0.001174"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:55:02.431944" level="INFO">${rand_npwp} = 3975435426693183</msg>
+<var>${rand_npwp}</var>
+<arg>16</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:55:02.431223" elapsed="0.000988"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:55:02.433776" level="INFO">${DYNAMIC_TAX_ID} = 3975435426693183</msg>
+<arg>${DYNAMIC_TAX_ID}</arg>
+<arg>${rand_npwp}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:55:02.432612" elapsed="0.001594"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-08T09:55:02.435440" level="INFO">${rand_name} = cuqKS</msg>
+<var>${rand_name}</var>
+<arg>5</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-09-08T09:55:02.434683" elapsed="0.001010"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-09-08T09:55:02.436915" level="INFO">${timestamp} = 5502</msg>
+<var>${timestamp}</var>
+<arg>result_format=%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-09-08T09:55:02.436043" elapsed="0.001124"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-09-08T09:55:02.438508" level="INFO">${DYNAMIC_CLIENT_NAME} = Client cuqKS 5502</msg>
+<arg>${DYNAMIC_CLIENT_NAME}</arg>
+<arg>Client ${rand_name} ${timestamp}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-09-08T09:55:02.437538" elapsed="0.001238"/>
+</kw>
+<doc>Generate data unik 16 digit untuk Account &amp; NPWP, serta Client Name dinamis</doc>
+<status status="PASS" start="2026-09-08T09:55:02.427653" elapsed="0.011396"/>
+</kw>
+<kw name="Buka Pop Up Create New Billing ID" owner="create_billing_keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:55:05.441566" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:55:02.440417" elapsed="3.001770"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_DASHBOARD}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:55:05.442737" elapsed="0.010152"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:05.453990" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:55:05.453266" elapsed="0.032823"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_CREATE_NEW_BILLING}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:55:05.486601" elapsed="0.020835"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:05.508667" level="INFO">Clicking element 'css=#ctl00_Main_rbtCreateNewBillingId'.</msg>
+<arg>${BTN_CREATE_NEW_BILLING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:05.507873" elapsed="0.181133"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:55:05.689706" elapsed="0.006333"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:55:07.698491" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:55:05.696639" elapsed="2.002312"/>
+</kw>
+<status status="PASS" start="2026-09-08T09:55:02.439432" elapsed="5.259777"/>
+</kw>
+<kw name="Isi Form Create New Billing ID Bagian Pertama" owner="create_billing_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_DASHBOARD}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:55:07.701209" elapsed="0.009974"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:07.712192" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:55:07.711509" elapsed="0.029095"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FRAME_POPUP}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-08T09:55:07.740929" elapsed="0.008174"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:07.750300" level="INFO">Selecting frame 'xpath=//iframe[@name='PopUpWindow']'.</msg>
+<arg>${FRAME_POPUP}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:55:07.749466" elapsed="0.036901"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${RDO_NASABAH}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:55:07.786700" elapsed="0.021125"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${RDO_NASABAH}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-09-08T09:55:07.808412" elapsed="0.029648"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:07.839317" level="INFO">Clicking element 'id=Main_rblNasabahType_0'.</msg>
+<arg>${RDO_NASABAH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:07.838461" elapsed="0.192940"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:08.032628" level="INFO">Typing text '1237595012162437' into text field 'id=Main_tbCustomerAcctNo'.</msg>
+<arg>${INPUT_ACCOUNT_NO}</arg>
+<arg>${account_no}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:08.031809" elapsed="0.210549"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:08.243770" level="INFO">Typing text '3975435426693183' into text field 'id=ctl00_Main_tbTaxPayerIdNo_Input'.</msg>
+<arg>${INPUT_TAX_PAYER_ID}</arg>
+<arg>${tax_payer_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:08.242778" elapsed="0.228767"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:08.473056" level="INFO">Selecting options from selection list 'id=Main_ddlChannelType' by value 7012.</msg>
+<arg>${DDL_CHANNEL_TYPE}</arg>
+<arg>${channel_value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-09-08T09:55:08.472027" elapsed="0.151292"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:55:08.623731" elapsed="0.034317"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-09-08T09:55:08.658811" elapsed="0.037013"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${INPUT_CLIENT_NAME}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:08.696413" elapsed="0.039815"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:08.739292" level="INFO">Clicking element 'id=Main_tbCustomerName'.</msg>
+<arg>${INPUT_CLIENT_NAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:08.736871" elapsed="0.264395"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:09.003226" level="INFO">Typing text 'Client cuqKS 5502' into text field 'id=Main_tbCustomerName'.</msg>
+<arg>${INPUT_CLIENT_NAME}</arg>
+<arg>${client_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:09.001923" elapsed="0.251404"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:09.254892" level="INFO">Typing text 'Pembayaran Pajak Rutin Data Ke-5' into text field 'id=Main_tbDescription'.</msg>
+<arg>${INPUT_DESCRIPTION}</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:09.253875" elapsed="0.185699"/>
+</kw>
+<arg>${DYNAMIC_ACCOUNT_NO}</arg>
+<arg>${DYNAMIC_TAX_ID}</arg>
+<arg>7012</arg>
+<arg>${DYNAMIC_CLIENT_NAME}</arg>
+<arg>Pembayaran Pajak Rutin Data Ke-${i}</arg>
+<status status="PASS" start="2026-09-08T09:55:07.699629" elapsed="1.740270"/>
+</kw>
+<kw name="Isi Detail Tax Payment Dan Submit" owner="create_billing_keywords">
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:55:09.441440" elapsed="0.004987"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:09.447970" level="INFO">Selecting frame 'xpath=//frame[@src='Home/Home.aspx']'.</msg>
+<arg>${FRAME_DASHBOARD}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:55:09.446860" elapsed="0.037609"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:09.485695" level="INFO">Selecting frame 'xpath=//iframe[@name='PopUpWindow']'.</msg>
+<arg>${FRAME_POPUP}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-09-08T09:55:09.484882" elapsed="0.041657"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_TAX_ACCOUNT_MAP}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:55:09.527175" elapsed="0.028429"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:09.556831" level="INFO">Clicking element 'id=ctl00_Main_rcbTaxAccountCode_Input'.</msg>
+<arg>${INPUT_TAX_ACCOUNT_MAP}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:09.556023" elapsed="0.233352"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:55:10.791091" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:55:09.789769" elapsed="1.001663"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//li[normalize-space()="${map_code}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:55:10.791776" elapsed="0.021024"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:10.814234" level="INFO">Clicking element 'xpath=//li[normalize-space()="411119 - PPh Migas Lainnya"]'.</msg>
+<arg>xpath=//li[normalize-space()="${map_code}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:10.813260" elapsed="0.183445"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:55:12.998879" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:55:10.997250" elapsed="2.002048"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_PAYMENT_CODE}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:55:12.999716" elapsed="0.016045"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:13.016788" level="INFO">Clicking element 'id=ctl00_Main_rcbPaymentCode_Input'.</msg>
+<arg>${INPUT_PAYMENT_CODE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:13.016090" elapsed="0.208178"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:55:14.226297" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:55:13.224629" elapsed="1.002049"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="${payment_code}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:55:14.227012" elapsed="0.016783"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:14.245308" level="INFO">Clicking element 'xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="100 - Masa"]'.</msg>
+<arg>xpath=//div[@id="ctl00_Main_rcbPaymentCode_DropDown"]//li[normalize-space()="${payment_code}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:14.244318" elapsed="0.190978"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_TAX_YEAR}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:55:14.435675" elapsed="0.026836"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:14.463664" level="INFO">Clicking element 'id=ctl00_Main_rntYear'.</msg>
+<arg>${INPUT_TAX_YEAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:14.462873" elapsed="0.278553"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:14.743579" level="INFO">Typing text '2026' into text field 'id=ctl00_Main_rntYear'.</msg>
+<arg>${INPUT_TAX_YEAR}</arg>
+<arg>${tax_year}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:14.742257" elapsed="0.129039"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_AMOUNT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:55:14.871922" elapsed="0.031614"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:14.904775" level="INFO">Clicking element 'id=ctl00_Main_rntAmount'.</msg>
+<arg>${INPUT_AMOUNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:14.903954" elapsed="0.253489"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:15.159521" level="INFO">Typing text '1500000' into text field 'id=ctl00_Main_rntAmount'.</msg>
+<arg>${INPUT_AMOUNT}</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:15.158109" elapsed="0.135978"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_ADD_PAYMENT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:55:15.294651" elapsed="0.028140"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:15.324051" level="INFO">Clicking element 'id=ctl00_Main_rbtAddTax'.</msg>
+<arg>${BTN_ADD_PAYMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:15.323217" elapsed="0.247984"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:55:17.572956" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:55:15.571603" elapsed="2.001751"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_SUBMIT_BILLING}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-08T09:55:17.573783" elapsed="0.017583"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:17.592722" level="INFO">Clicking element 'id=ctl00_Main_rbtSubmit'.</msg>
+<arg>${BTN_SUBMIT_BILLING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-08T09:55:17.591832" elapsed="0.202235"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:17.796400" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-09-08T09:55:17.795543" elapsed="0.011719"/>
+</kw>
+<arg>Handle Alert</arg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-09-08T09:55:17.794439" elapsed="0.013304"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:17.810454" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-09-08T09:55:17.809285" elapsed="0.603045"/>
+</kw>
+<arg>Handle Alert</arg>
+<arg>ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-09-08T09:55:17.808108" elapsed="0.604487"/>
+</kw>
+<arg>411119 - PPh Migas Lainnya</arg>
+<arg>100 - Masa</arg>
+<arg>2026</arg>
+<arg>1500000</arg>
+<status status="PASS" start="2026-09-08T09:55:09.440454" elapsed="8.972392"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-08T09:55:21.414255" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-09-08T09:55:18.413141" elapsed="3.001516"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2026-09-08T09:55:02.421370" elapsed="18.993562"/>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>6</value>
+<status status="PASS" start="2026-09-08T09:53:45.305496" elapsed="96.109607"/>
+</for>
+<kw name="Teardown Akhir Test" owner="login_keywords" type="TEARDOWN">
+<kw name="Ambil Screenshot Dengan Timestamp" owner="login_keywords">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-09-08T09:55:21.418889" level="INFO">${timestamp} = 20260908_095521</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-09-08T09:55:21.418095" elapsed="0.001057"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-08T09:55:21.584921" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screen%20Shots/Create%205%20Data%20Billing%20ID%20Teller_20260908_095521.png"&gt;&lt;img src="Screen%20Shots/Create%205%20Data%20Billing%20ID%20Teller_20260908_095521.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>D:\\ROBOT FRAMEWORK AUTOMATION\\resources\\keywords/../../results/Screen Shots/${TEST NAME}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-08T09:55:21.419698" elapsed="0.165898"/>
+</kw>
+<status status="PASS" start="2026-09-08T09:55:21.417294" elapsed="0.168675"/>
+</kw>
+<kw name="Hentikan Perekaman Video" owner="login_keywords">
+<kw name="Stop Video Recording" owner="ScreenCapLibrary">
+<msg time="2026-09-08T09:55:21.677571" level="INFO" html="true">&lt;a href="Screen%20Record/Create%205%20Data%20Billing%20ID%20Teller_20260908_095328_1.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="Screen%20Record/Create%205%20Data%20Billing%20ID%20Teller_20260908_095328_1.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<arg>alias=video1</arg>
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<status status="PASS" start="2026-09-08T09:55:21.587920" elapsed="0.090512"/>
+</kw>
+<status status="PASS" start="2026-09-08T09:55:21.586486" elapsed="0.092445"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-09-08T09:55:21.679378" elapsed="3.009423"/>
+</kw>
+<status status="PASS" start="2026-09-08T09:55:21.416036" elapsed="3.273253"/>
+</kw>
+<doc>Membuat 5 data billing ID berturut-turut menggunakan perulangan (FOR Loop)</doc>
+<status status="PASS" start="2026-09-08T09:53:23.065221" elapsed="121.624658"/>
+</test>
+<doc>Test Suite untuk Membuat 5 Data Billing ID Teller Secara Otomatis</doc>
+<status status="PASS" start="2026-09-08T09:53:19.866373" elapsed="124.835232"/>
+</suite>
+<status status="PASS" start="2026-09-08T09:53:19.857667" elapsed="124.851159"/>
+</suite>
+<status status="PASS" start="2026-09-08T09:53:19.851707" elapsed="124.865788"/>
+</suite>
+<status status="PASS" start="2026-09-08T09:53:19.845878" elapsed="124.877273"/>
+</suite>
+<status status="PASS" start="2026-09-08T09:53:19.771244" elapsed="124.955846"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="ROBOT FRAMEWORK AUTOMATION" id="s1" pass="1" fail="0" skip="0">ROBOT FRAMEWORK AUTOMATION</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">ROBOT FRAMEWORK AUTOMATION.Tests</stat>
+<stat name="Transaction" id="s1-s1-s1" pass="1" fail="0" skip="0">ROBOT FRAMEWORK AUTOMATION.Tests.Transaction</stat>
+<stat name="Create Billing" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">ROBOT FRAMEWORK AUTOMATION.Tests.Transaction.Create Billing</stat>
+<stat name="Create Billing 5Data Teller" id="s1-s1-s1-s1-s1" pass="1" fail="0" skip="0">ROBOT FRAMEWORK AUTOMATION.Tests.Transaction.Create Billing.Create Billing 5Data Teller</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
